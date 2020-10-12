@@ -22,10 +22,10 @@ Place the dog walking space-boxes flow horisontal with flexbox
 Add a google font to your project and add to the headings
 
 ## 6 (css)
-Make the heart beat with a keyframe animation
+Animate the heart with a keyframe animation
 
 ## 7 (css)
-Make sure the website looks good in mobile using media queries
+Make sure the website is responsive using media queries
 
 ## 8 (Js)
 A. Print "Hello world" in the console when the page is loaded.
@@ -45,3 +45,23 @@ A. On page load, Fetch a list of all dog breeds using https://dog.ceo/api/breeds
 B. Transform the response to a list of dog breeds (strings) Hint: use Object.keys() to get an array of an objects keys
 
 C. Print the breeds in the "breeds" aside. Hint: Use element.insertAdjacentHTML('beforeend', '...');
+
+
+# Tools
+
+## Flexbox
+https://flexboxfroggy.com/#sv
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+## Google Font
+https://fonts.google.com/
+
+## Media queries
+https://css-tricks.com/css-media-queries/
+
+## Keyframe animation
+https://css-tricks.com/snippets/css/keyframe-animation-syntax/
+
+## Dog API
+https://dog.ceo/dog-api/
+
