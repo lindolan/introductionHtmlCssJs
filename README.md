@@ -3,7 +3,9 @@ Hi guys! Clone this repository and do the exersices below.
 # Excersises:
 
 ## 1 (html)
-What html exersise should we have?
+A. Add a title to the website in the head
+B. Add a link to the stylesheet in the head
+C. Declare the language of the website in the html 
 
 ## 2 (css)
 Make the header 750px height and image and background-image to it. 
