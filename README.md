@@ -49,19 +49,19 @@ C. Print the breeds in the "breeds" aside. Hint: Use element.insertAdjacentHTML(
 
 # Tools
 
-## Flexbox
+### Flexbox
 https://flexboxfroggy.com/#sv
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-## Google Font
+### Google Font
 https://fonts.google.com/
 
-## Media queries
+### Media queries
 https://css-tricks.com/css-media-queries/
 
-## Keyframe animation
+### Keyframe animation
 https://css-tricks.com/snippets/css/keyframe-animation-syntax/
 
-## Dog API
+### Dog API
 https://dog.ceo/dog-api/
 
