@@ -1,0 +1,48 @@
+/* Här är styling som gäller för hela sidan */
+body {
+  box-sizing: border-box;
+  font-family: Helvetica, "sans serif";
+  color: #222222;
+}
+
+/* Här är styling som gäller för alla rubriker och texter */
+
+h1 {
+  font-size: 65px;
+  padding: 150px 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 200;
+  color: black;
+}
+
+a {
+  color:#fe859f;
+}
+
+
+/* Här är all styling för footern */
+
+footer {
+  background-color: #282626;
+  padding: 150px 300px;
+}
