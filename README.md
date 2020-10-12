@@ -4,7 +4,9 @@ Hi guys! Clone this repository and do the exersices below.
 
 ## 1 (html)
 A. Add a title to the website in the head
+
 B. Add a link to the stylesheet in the head
+
 C. Declare the language of the website in the html 
 
 ## 2 (css)
