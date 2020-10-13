@@ -1,30 +1,32 @@
-let buttonClickRandom = document.querySelector('[data-id=button-random]');
-let buttonClickAll = document.querySelector('[data-id=button-all]');
-let buttonClickFilter = document.querySelector('[data-id=filter]');
+let button = document.querySelector('[data-id=button]');
 let input = document.querySelector('[data-id=name]');
 let searchTerm = '';
+let dogList;
 
-//1A
+//1A CODEALONG
 //console.log('Hello world!');
 
-//1B
-//buttonClick.addEventListener('click', () => console.log('Hello world!'));
+//1B CODEALONG
+//button.addEventListener('click', () => console.log('Hello world!'));
 
-//1C
-const setName = () => { console.log('Hello ' + input.value); }
-//buttonClickRandom.addEventListener('click', setName);
+//1C CODEALONG
+//const setName = () => { console.log('Hello ' + input.value); }
+//button.addEventListener('click', setName);
 
-//2A
+//2A CODEALONG
 const fetchRandomDogs = async () => {
     const response = await fetch('https://dog.ceo/api/breeds/image/random');
     const data = await response.json();
     console.log(data);
+    console.log(data.message);
 //2B
     const resultDiv = document.querySelector('[data-id=result]');
     resultDiv.innerHTML = `<img src=${data.message}></img>`
 }
+//fetchRandomDogs();
+button.addEventListener('click', fetchRandomDogs);
 
-buttonClickRandom.addEventListener('click', fetchRandomDogs);
+//--------------------//
 
 //3A
 const fetchAllDogs = async () => {
@@ -32,39 +34,41 @@ const fetchAllDogs = async () => {
     const data = await response.json();
     console.log("data", data);
 //3B
-    const breeds = Object.keys(data.message);
-    console.log("breeds", breeds);
-//3C
-    const breedsDiv = document.querySelector('[data-id=breeds]');
-     breeds
-     .filter((breed => breed.startsWith(input.value)))
-     .forEach((breed) => {
-         breedsDiv.insertAdjacentHTML('beforeend', `<p>${breed}</p>`)
-        })
-
-//buttonClickAll.addEventListener('click', fetchAllDogs);
-//const filteredDogs = breeds.filter((breed => breed.startsWith(input.value)));
-//console.log('Searching for ' + input.value); 
-//console.log("filtered dogs", filteredDogs);
+    const dogs = Object.keys(data.message);
+    console.log("dogs", dogs);
+    dogList = dogs;
+    insertDogs(dogs);
 }
-fetchAllDogs();
-
-//4
-input.addEventListener('input', (event) => {
-	searchTerm = event.target.value;
-	// re-display again based on the new search_term
-	fetchAllDogs();
-});
-
-
-
 //3C
-//const breedsDiv = document.querySelector('[data-id=breeds]');
-//breedsDiv.insertAdjacentHTML('beforeend', `<li>${breeds}</li>`);
-//breedsDiv.innerHTML = `<li>${breeds}</li>`
-//breeds.forEach(breed => breedsDiv.innerHTML = `<li>${breed}</li>`)
-// breeds
-     //.filter(breed => breed.indexOf(value) === 0)
-//     .forEach((breed) => {
-//         breedsDiv.insertAdjacentHTML('beforeend', `<li>${breed}</li>`);
-//     });
+const insertDogs = (dogs) => {
+    const breedsDiv = document.querySelector('[data-id=breeds]');
+    breedsDiv.innerHTML = '';
+    dogs.forEach((dog) => {
+        const dogElement = document.createElement("p")
+        dogElement.innerHTML = dog
+        dogElement.onclick = () => getRandomBreedImage(dog)
+        breedsDiv.insertAdjacentElement('beforeend', dogElement)
+    })
+}
+
+//4A
+document.querySelector("[data-id=name]").oninput = (e) => {
+    const value = e.target.value;
+    const filteredDogs = dogList.filter(dog => dog.startsWith(value));
+    insertDogs(filteredDogs);
+};
+
+//4B
+const getRandomBreedImage = async breed => {
+    const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
+    const data = await response.json();
+    const imgSrc = data.message;
+
+    const img = document.createElement("img");
+    img.src = imgSrc;
+
+    const result = document.querySelector("[data-id=image]");
+    result.appendChild(img)
+}
+
+fetchAllDogs();
