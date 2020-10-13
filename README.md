@@ -10,13 +10,13 @@ B. Add a link to the stylesheet in the head
 C. Declare the language of the website in the html 
 
 ## 2 (css)
-Make the header 750px height and image and background-image to it. 
+Make the header 750px height and a background-image to it. 
 
 ## 3 (css) 
 Add hover effect to links and buttons
 
 ## 4 (css)
-Place the dog walking space-boxes flow horisontal with flexbox
+Make the dog walking place-boxes flow horisontal with flexbox
 
 ## 5 (css)
 Add a google font to your project and add to the headings
