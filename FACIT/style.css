@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-/* Här är styling som gäller för hela sidan */
+/* Här är styling för hela sidan */
 body {
-  box-sizing: border-box;
-  font-family: Helvetica, "sans serif";
+  font-family: Helvetica, sans-serif;
   /* font-family: 'Roboto', sans-serif; */
   color: #222222;
+  min-width: fit-content;
+  margin: 0;
 }
 
 /* Här är styling som gäller för alla rubriker och texter */
@@ -35,11 +36,11 @@ h4 {
 p {
   font-size: 20px;
   font-weight: 200;
-  color: black;
+  color: #222222;
 }
 
 a {
-  color:#fe859f;
+  color:#ff726c;
   text-decoration: none;
 }
 
@@ -47,19 +48,26 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Här finns all styling för knappen */
+/* Här finns all styling för buttons och input */
 
 .button {
   background-color: #ff726c;
-  color: white;
   border: 1px solid #ff726c;
+  color: #ffffff;
   border-radius: 40px;
-  padding: 25px;
+  padding: 15px 25px;
+  margin: 10px;
 }
 
 .button:hover {
   background-color: white;
   color: #ff726c;
+}
+
+.input {
+  padding: 15px 25px;
+  border: 1px solid #222222;
+  border-radius: 40px;
 }
 
 /* Här är styling för headern */
@@ -79,17 +87,14 @@ a:hover {
 }
 
 .icons-container {
-  width: 80%;
-  margin: 0 auto;
   padding: 50px 0;
   text-align: center;
 }
 
-.icons {
+.icons-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: top;
 }
 
 .icon {
@@ -102,12 +107,12 @@ a:hover {
 
 .heart {
   animation: rotate 0.5s;
-  /* animation-delay: 3s;
-  animation-iteration-count: 3; */
+  animation-delay: 3s;
+  animation-iteration-count: 3;
 }
 
 @keyframes beat {
-  50% {
+  to {
     width: 130px;
   }
 }
@@ -130,10 +135,11 @@ a:hover {
 /* Här är all styling för boxsektionen */
 
 .places {
-  margin: 5%;
+  margin: 50px;
 }
 
 .places-container {
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
 }
@@ -151,49 +157,16 @@ a:hover {
 
 .place img {
   width: 100%;
-  /* height: 350px; */
 }
 
 /* Här är all styling för dogsectionen  */
 .dogs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-}
-
-.dog-results {
-  display: flex;
-  flex-direction: row;
-  margin: 50px 0;
-}
-
-.result {
-  width: 400px;
-  height: 400px;
-  border: 1px solid #222222;
-  margin: 0 20px;
-  overflow: hidden;
-}
-
-.result img {
-  width: 100%;
+  margin: 50px;
 }
 
 .breeds {
   width: 200px;
   margin: 0 20px;
-}
-
-.input {
-  font-size: 16px;
-  font-weight: 200;
-  text-decoration: none;
-  padding: 25px;
-  border: 1px solid #222222;
-  border-radius: 40px;
-  outline: none;
 }
 
 /* Här är all styling för footern */
@@ -205,5 +178,20 @@ footer {
 
 /* Här är alla media queries */
 @media only screen and (max-width: 600px) {
+  .header {
+    background-position: center;
+  }
 
+  .icons-wrapper {
+    flex-direction: column;
+  }
+
+  .places-container {
+    flex-direction: column;
+  }
+  
+  .place {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
