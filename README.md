@@ -1,4 +1,4 @@
-Hi guys! Clone this repository and do the exersices below.
+Hi guys! Clone this repository and do the exersices below after our code along.
 
 # Excersises:
 
