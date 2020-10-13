@@ -3,78 +3,75 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" type="text/css">
     <title>Introduction to HTML, Css, Js</title>
   </head>
-
   <body>
+    <nav>
+      <a href="#about">pros</a>
+      <a href="#places">places</a>
+    </nav>
     <section class="header">
       <h1>Hey, dog lover!</h1>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="icons-container">  
         <h2>pros of having a dog in your life</h2>
-        <div class="icons">
+        <div class="icons-wrapper">
           <div class="icon">
-            <img src="./images/heart.svg">
+            <img src="./images/icons/heart.svg" class="heart">
             <h4>Unconditional love</h4>
           </div>
           <div class="icon">
-            <img src="./images/outside.svg">
+            <img src="./images/icons/outside.svg">
             <h4>A lot of fresh air</h4>
           </div>
           <div class="icon">
-            <img src="./images/disipline.svg">
+            <img src="./images/icons/disipline.svg">
             <h4>Routines and dicipline</h4>
           </div>
         </div>
       </div>
     </section>
-    <section class="places">
+    <section class="places" id="places">
       <h3>dog walking areas in stockholm</h3>
       <div class="places-container">
-        <div class="place">
-          <img src="./images/langholmen.jpg"/>
+        <article class="place">
+          <img src="./images/places/langholmen.jpg"/>
           <h4>Hundrastgården på Långholmen</h4>
           <a href=#>Hitta hit</a>
-        </div>
-        <div class="place">
-          <img src="./images/reimersholme.jpg"/>
+        </article>
+        <article class="place">
+          <img src="./images/places/reimersholme.jpg"/>
           <h4>Reimersholme Hundrastområde</h4>
           <a href=#>Hitta hit</a>
-        </div>
-        <div class="place">
-          <img src="./images/bellevue.jpg"/>
+        </article>
+        <article class="place">
+          <img src="./images/places/bellevue.jpg"/>
           <h4>Bellevueparken Hundrastområde</h4>
           <a href=#>Hitta hit</a>
-        </div>
-        <div class="place">
-          <img src="./images/drottningsholm.jpg"/>
+        </article>
+        <article class="place">
+          <img src="./images/places/drottningsholm.jpg"/>
           <h4>Drottningholm Hundöar</h4>
           <a href=#>Hitta hit</a>
-        </div>
-        <div class="place">
-          <img src="./images/nyckelviken.jpg"/>
+        </article>
+        <article class="place">
+          <img src="./images/places/nyckelviken.jpg"/>
           <h4>Nyckelvikens Hundrastgård</h4>
           <a href=#>Hitta hit</a>
-        </div>
+        </article>
       </div>
     </section>
     <section class="dogs">
-      <div class="dog-buttons">
-        <button data-id="button-random" class="button">Click to fetch random dog</button>
-        <!-- <button data-id="button-all" class="button">Click to fetch all dogs</button> -->
+        <button data-id="button" class="button">Click me</button>
         <input data-id="name" class="input" placeholder="Filter dogs"></input>
-        <!-- <button data-id="filter" class="button">Filter</button> -->
-      </div>
-      <div class="dog-results">
         <div data-id="result" class="result"></div>
         <div data-id="breeds" class="breeds"></div>
-      </div>
+        <div data-id="image"></div>
     </section>
-  <footer>
-  </footer>
+    <footer>
+    </footer>
   <script src="main.js"></script>
   </body>
 </html>
