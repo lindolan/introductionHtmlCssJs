@@ -37,14 +37,14 @@ C. Print "Hello [name]" to the console whenever the button is clicked, where [na
 ## 9 (Js)
 A. Make an API call to https://dog.ceo/api/breeds/image/random whenever the button is clicked and print the result to the console.
 
-B. Add an image showing the random dog image inside the "result" div
+B. Add an image showing the random dog image inside a "result" div
 
 ## 10 (Js)
 A. On page load, Fetch a list of all dog breeds using https://dog.ceo/api/breeds/list/all and print the result to the console.
 
 B. Transform the response to a list of dog breeds (strings) Hint: use Object.keys() to get an array of an objects keys
 
-C. Print the breeds in the "breeds" aside. Hint: Use element.insertAdjacentHTML('beforeend', '...');
+C. Print the breeds in a "breeds" div. Hint: Use element.insertAdjacentHTML('beforeend', '...');
 
 
 # Tools
